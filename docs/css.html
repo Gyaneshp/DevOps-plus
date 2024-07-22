@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo" class="logo">
+        </a>
+        <a href="python.html">Python</a>
+        <a href="css.html" class="active">CSS</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="sql.html">SQL</a>
+        <a href="numpy.html">NumPy</a>
+    </div>
+
+    <div class="sidebar">
+        <h2>CSS Tutorial</h2>
+        <ul id="sidebar-list-css">
+            <li><a href="pages/css_intro.html">CSS Intro</a></li>
+            <!-- Add more CSS links here -->
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div id="content">
+            <!-- CSS intro page is the default content -->
+            <h2>Welcome to CSS Tutorial</h2>
+            <p>This is the place where CSS tutorials are organized.</p>
+        </div>
+        <div class="navigation-buttons">
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
