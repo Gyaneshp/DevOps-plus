@@ -31,7 +31,7 @@ body {
 }
 
 .topnav .logo {
-    height: 40px;
+    height: 30px;
     padding: 7px 10px;
 }
 
@@ -48,7 +48,7 @@ body {
 .sidebar h2 {
     padding: 15px;
     text-align: center;
-    background: #444;
+    background: #000;
     color: white;
     margin-top: 0;
 }
