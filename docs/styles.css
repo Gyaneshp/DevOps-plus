@@ -26,7 +26,7 @@ body {
 }
 
 .topnav a:hover {
-    background-color: black;
+    background-color: #000;
     color: white;
 }
 
