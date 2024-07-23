@@ -9,15 +9,24 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #444;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 50px; /* Adjust the height here */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .topnav a {
-    float: left;
+    float: none; /* Remove float to center the menu */
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0 16px; /* Adjust padding if needed */
     text-decoration: none;
+    line-height: 50px; /* Adjust line-height to match the height */
 }
 
 .topnav a.active {
@@ -32,7 +41,7 @@ body {
 
 .topnav .logo {
     height: 40px;
-    padding: 7px 10px;
+    padding: 5px 10px; /* Adjust padding to fit within the height */
 }
 
 .sidebar {
@@ -41,14 +50,15 @@ body {
     width: 250px;
     background-color: #222;
     position: fixed;
-    height: 100%;
+    top: 50px; /* Adjust based on the height of the topnav */
+    height: calc(100% - 50px); /* Adjust based on the height of the topnav */
     overflow: auto;
 }
 
 .sidebar h2 {
     padding: 15px;
     text-align: center;
-    background: #000;
+    background: #444;
     color: white;
     margin-top: 0;
 }
@@ -78,6 +88,7 @@ body {
 .main-content {
     margin-left: 260px;
     padding: 20px;
+    padding-top: 70px; /* Adjust padding to ensure content is not hidden behind topnav */
 }
 
 #content {
@@ -103,5 +114,5 @@ body {
 }
 
 .navigation-buttons button:hover {
-    background-color: #b15e3e;
+    background-color: #b15e0e;
 }
