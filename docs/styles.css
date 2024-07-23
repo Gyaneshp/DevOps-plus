@@ -40,8 +40,8 @@ body {
 }
 
 .topnav .logo {
-    height: 40px;
-    padding: 3px 9px; /* Adjust padding to fit within the height */
+    height: 30px;
+    padding: 3px 6px; /* Adjust padding to fit within the height */
 }
 
 .sidebar {
@@ -114,5 +114,5 @@ body {
 }
 
 .navigation-buttons button:hover {
-    background-color: #b15e0e;
+    background-color: #532a04;
 }
