@@ -8,7 +8,7 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: #444;
+    background-color: #222;
     position: fixed;
     width: 100%;
     top: 0;
@@ -114,5 +114,5 @@ body {
 }
 
 .navigation-buttons button:hover {
-    background-color: #532a04;
+    background-color: #854a14;
 }
