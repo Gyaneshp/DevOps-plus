@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     const pages = {
-        python: ["python_intro", "python_get_started", "python_syntax", "python_comments"],
-        css: ["css_intro"]
+        devops: ["devops_intro", "continuous_integration", "continuous_delivery", "jenkins"],
+        git: ["git_intro", "github"],
+        linux: ["linux_intro", "redhat", "centos", "ubuntu"],
+        ansible: ["ansible_intro", "adhoc_commands", "simple_project"],
+        python: ["python_intro", "python_get_started", "python_syntax", "python_comments"]
         // Add more sections and pages here
     };
 
