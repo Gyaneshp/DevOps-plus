@@ -21,7 +21,7 @@ body {
 }
 
 .topnav a.active {
-    background-color: #4CAF50;
+    background-color: #b15e2e;
     color: white;
 }
 
@@ -66,7 +66,7 @@ body {
 }
 
 .sidebar ul li a.active {
-    background-color: #4CAF50;
+    background-color: #b15e2e;
     color: white;
 }
 
@@ -94,7 +94,7 @@ body {
 }
 
 .navigation-buttons button {
-    background-color: #4CAF50;
+    background-color: #b15e2e;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -103,5 +103,5 @@ body {
 }
 
 .navigation-buttons button:hover {
-    background-color: #45a049;
+    background-color: #b15e3e;
 }
