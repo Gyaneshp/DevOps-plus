@@ -30,12 +30,12 @@ body {
 }
 
 .topnav a.active {
-    background-color: #1c8b00;
+    background-color: #7e4700;
     color: white;
 }
 
 .topnav a:hover {
-    background-color: #1c8b0050;
+    background-color: #7e470031;
     color: white;
 }
 
@@ -76,12 +76,12 @@ body {
 }
 
 .sidebar ul li a.active {
-    background-color: #1c8b00;
+    background-color: #7e4700;
     color: white;
 }
 
 .sidebar ul li a:hover:not(.active) {
-    background-color: #1c8b0050;
+    background-color: #7e470031;
     color: white;
 }
 
@@ -105,7 +105,7 @@ body {
 }
 
 .navigation-buttons button {
-    background-color: #1c8b00;
+    background-color: #7e4700;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -114,5 +114,5 @@ body {
 }
 
 .navigation-buttons button:hover {
-    background-color: #125800;
+    background-color: #7e470031;
 }
