@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const pages = {
+        index: ["about", "contribute", "policy"],
         devops: ["devops_intro", "continuous_integration", "continuous_delivery", "jenkins"],
         git: ["git_intro", "github"],
         linux: ["linux_intro", "redhat", "centos", "ubuntu"],
@@ -68,6 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Load the initial page if any, or default to the first page of the current section
-    const initialPage = pages[currentSection] ? pages[currentSection][0] : "python_intro";
+    const initialPage = pages[currentSection] ? pages[currentSection][0] : "about";
     loadContent(initialPage);
 });
