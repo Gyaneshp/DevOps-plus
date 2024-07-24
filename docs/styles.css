@@ -35,7 +35,7 @@ body {
 }
 
 .topnav a:hover {
-    background-color: #7e470031;
+    background-color: #7e47003f;
     color: white;
 }
 
@@ -81,7 +81,7 @@ body {
 }
 
 .sidebar ul li a:hover:not(.active) {
-    background-color: #7e470031;
+    background-color: #7e47003f;
     color: white;
 }
 
@@ -114,5 +114,5 @@ body {
 }
 
 .navigation-buttons button:hover {
-    background-color: #7e470031;
+    background-color: #7e4700d0;
 }
