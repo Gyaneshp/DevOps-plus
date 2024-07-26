@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         git: ["git_intro", "github"],
         linux: ["linux_intro", "redhat", "centos", "ubuntu"],
         ansible: ["ansible_intro", "adhoc_commands", "simple_project"],
-        python: ["python_intro", "python_get_started", "python_syntax", "python_comments"]
+        python: ["python_intro", "python_variables", "python_syntax", "python_comments"]
         // Add more sections and pages here
     };
 
