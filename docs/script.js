@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const content = document.getElementById("content");
     const topnavLinks = document.querySelectorAll(".topnav a");
     const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
-    let currentSection = "index";
+    let currentSection = "python";
     
     const pages = {
-        index: ["about", "contribute", "policy"],
         devops: ["devops_intro", "continuous_integration", "continuous_delivery", "jenkins"],
         git: ["git_intro", "github"],
         linux: ["linux_intro", "redhat", "centos", "ubuntu"],
@@ -80,6 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Load the initial page if any, or default to the first page of the current sections
-    const initialPage = pages[currentSection] ? pages[currentSection][0] : "about";
+    const initialPage = pages[currentSection] ? pages[currentSection][0] : "python_intro";
     loadContent(initialPage);
 });
