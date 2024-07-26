@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const content = document.getElementById("content");
     const topnavLinks = document.querySelectorAll(".topnav a");
     const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
-    let currentSection = "python";
+    let currentSection = "index";
     
     const pages = {
         index: ["about", "contribute", "policy"],
@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add more sections and pages here
     };
 
+    // Function to load content
     function loadContent(page) {
         fetch(`pages/${page}.html`)
             .then(response => response.text())
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => content.innerHTML = "<p>Page not found.</p>");
     }
 
+    // Update the navigation buttons based on the current page
     function updateNavigationButtons(currentPage) {
         const sectionPages = pages[currentSection] || [];
         const currentIndex = sectionPages.indexOf(currentPage);
@@ -46,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // Highlight the current topic in the sidebar
     function highlightCurrentTopic(currentPage) {
         sidebarLinks.forEach(link => {
             const page = link.getAttribute("href").split("/").pop().replace(".html", "");
@@ -67,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // Add click event listeners to sidebar links
     sidebarLinks.forEach(link => {
         link.addEventListener("click", function(event) {
             event.preventDefault();
@@ -75,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const initialPage = pages[currentSection] ? pages[currentSection][0] : "python_intro";
+    // Load the initial page if any, or default to the first page of the current sections
+    const initialPage = pages[currentSection] ? pages[currentSection][0] : "about";
     loadContent(initialPage);
 });
