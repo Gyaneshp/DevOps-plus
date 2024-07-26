@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const content = document.getElementById("content");
     const topnavLinks = document.querySelectorAll(".topnav a");
     const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
-    let currentSection = "python";
+    let currentSection = "index";
     
     const pages = {
+        index: ["about", "contribute", "policy"],
         devops: ["devops_intro", "continuous_integration", "continuous_delivery", "jenkins"],
         git: ["git_intro", "github"],
         linux: ["linux_intro", "redhat", "centos", "ubuntu"],
         ansible: ["ansible_intro", "adhoc_commands", "simple_project"],
-        python: ["python_intro", "python_variables", "python_syntax", "python_comments"]
+        python: ["python_intro", "python_syntax", "python_comments", "python_variables"]
         // Add more sections and pages here
     };
 
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
             const section = this.getAttribute("href").split("/").pop().replace(".html", "");
             currentSection = section;
-            const firstPage = pages[section] ? pages[section][0] : "python_intro";
+            const firstPage = pages[section] ? pages[section][0] : "about";
             loadContent(firstPage);
         });
     });
@@ -79,6 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Load the initial page if any, or default to the first page of the current sections
-    const initialPage = pages[currentSection] ? pages[currentSection][0] : "python_intro";
+    const initialPage = pages[currentSection] ? pages[currentSection][0] : "about";
     loadContent(initialPage);
 });
