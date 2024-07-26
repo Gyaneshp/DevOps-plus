@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const content = document.getElementById("content");
+    const topnavLinks = document.querySelectorAll(".topnav a");
+    const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
+    let currentSection = "python";
+    
     const pages = {
         index: ["about", "contribute", "policy"],
         devops: ["devops_intro", "continuous_integration", "continuous_delivery", "jenkins"],
@@ -9,11 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add more sections and pages here
     };
 
-    const content = document.getElementById("content");
-    const sidebarLinks = document.querySelectorAll(".sidebar ul li a");
-    const currentSection = window.location.pathname.split("/").pop().replace(".html", "");
-
-    // Function to load content
     function loadContent(page) {
         fetch(`pages/${page}.html`)
             .then(response => response.text())
@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => content.innerHTML = "<p>Page not found.</p>");
     }
 
-    // Update the navigation buttons based on the current page
     function updateNavigationButtons(currentPage) {
         const sectionPages = pages[currentSection] || [];
         const currentIndex = sectionPages.indexOf(currentPage);
@@ -47,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Highlight the current topic in the sidebar
     function highlightCurrentTopic(currentPage) {
         sidebarLinks.forEach(link => {
             const page = link.getAttribute("href").split("/").pop().replace(".html", "");
@@ -59,7 +57,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Add click event listeners to sidebar links
+    topnavLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const section = this.getAttribute("href").split("/").pop().replace(".html", "");
+            currentSection = section;
+            const firstPage = pages[section] ? pages[section][0] : "python_intro";
+            loadContent(firstPage);
+        });
+    });
+
     sidebarLinks.forEach(link => {
         link.addEventListener("click", function(event) {
             event.preventDefault();
@@ -68,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Load the initial page if any, or default to the first page of the current section
-    const initialPage = pages[currentSection] ? pages[currentSection][0] : "about";
+    const initialPage = pages[currentSection] ? pages[currentSection][0] : "python_intro";
     loadContent(initialPage);
 });

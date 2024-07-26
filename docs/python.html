@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Tutorial</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Python Documentation</title>
 </head>
 <body>
     <div class="topnav">
@@ -17,30 +17,25 @@
         <a href="linux.html">Linux</a>
         <a href="ansible.html">Ansible</a>
         <a href="python.html" class="active">Python</a>
+        <!-- Add more Menus here -->
     </div>
-
     <div class="sidebar">
         <h2>Python Tutorial</h2>
-        <ul id="sidebar-list">
+        <ul>
             <li><a href="pages/python_intro.html">Python Intro</a></li>
             <li><a href="pages/python_get_started.html">Python Get Started</a></li>
             <li><a href="pages/python_syntax.html">Python Syntax</a></li>
             <li><a href="pages/python_comments.html">Python Comments</a></li>
+            <!-- Add more page links here -->
         </ul>
     </div>
-
     <div class="main-content">
-        <div id="content">
-            <!-- Python intro page is the default content -->
-            <h2>Welcome to Python Tutorial</h2>
-            <p>This is the place where Python tutorials are organized.</p>
-        </div>
+        <div id="content"></div>
         <div class="navigation-buttons">
-            <button id="prev-button">Previous</button>
-            <button id="next-button">Next</button>
+            <button id="prev-button" style="display: none;">Previous</button>
+            <button id="next-button" style="display: none;">Next</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

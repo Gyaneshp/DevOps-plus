@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Tutorial</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico">
+    <title>DevOps Documentation</title>
 </head>
 <body>
     <div class="topnav">
@@ -17,30 +17,25 @@
         <a href="linux.html">Linux</a>
         <a href="ansible.html">Ansible</a>
         <a href="python.html">Python</a>
+        <!-- Add more Menus here -->
     </div>
-
     <div class="sidebar">
         <h2>DevOps Tutorial</h2>
-        <ul id="sidebar-list-devops">
+        <ul>
             <li><a href="pages/devops_intro.html">DevOps Intro</a></li>
             <li><a href="pages/continuous_integration.html">Continuous Integration</a></li>
             <li><a href="pages/continuous_delivery.html">Continuous Delivery</a></li>
             <li><a href="pages/jenkins.html">Jenkins</a></li>
+            <!-- Add more page links here -->
         </ul>
     </div>
-
     <div class="main-content">
-        <div id="content">
-            <!-- DevOps intro page is the default content -->
-            <h2>Welcome to DevOps Tutorial</h2>
-            <p>This is the place where DevOps tutorials are organized.</p>
-        </div>
+        <div id="content"></div>
         <div class="navigation-buttons">
-            <button id="prev-button">Previous</button>
-            <button id="next-button">Next</button>
+            <button id="prev-button" style="display: none;">Previous</button>
+            <button id="next-button" style="display: none;">Next</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
